@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+/* GLOBAL */
+* {
+    box-sizing: border-box /* correcteur de paddings - https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing */
+  }
+  
+  html{
+        font-size: 62.5%; /* Ré-équilibrage du Rem face au Pixel pour des calculs simples - 62.5% de 16px (taille par défault des tous les navigateurs) = 10px :-). 
+        On garde ce font-size toujours en pourcentage, car si l'utilisateur a changé le paramétre de son navigateur (le cas des mal-voyants, par exemple) et a augmenté la taille de la police par défaut, on le respecte */
+      }
+  
+  body {
+    font-size:1.6rem; /* Cependant 10px est trop petit pour une taille de police, du coup on remet les choses dans l'ordre - 16px. Les margins et paddings vont être calculés à partir de 10px, car ils se baseront sur l'info de la balise <html> mais la taille du texte va se baser sur le <body> */	
+    background-color: #ffffea;
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width:100% /*correcteur de taille d'image : "ne dépasse pas ta propre taille ni la taille de ton parent" */
+    }
+
+h1  {
+    padding-top: 5rem;
+    font-size: 5rem;
+    font-family: 'suez One';
+}
+    
+h2 {
+   margin-top: 5rem;
+   font-family: 'suez One';
+}
+    
+h3  {
+    font-size: x-large;
+    text-decoration: underline;
+    font-size: 3rem;
+    font-family: 'suez One';
+}
+
+/* Navbar */
+
+header{
+    background-color: rgba(0,0,0, 80%);
+    height: 12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    margin: 0 10rem;
+    height: inherit;
+}
+
+header a:last-child{
+    display: flex;
+    align-items: center;
+    font-family: 'suez One';
+    text-decoration: none;
+    color: white;
+    font-size: 4rem;
+}
+
+header span{
+    display: flex;
+    align-items: center;
+    font-family: 'suez One';
+    text-decoration: none;
+    color: #ffffea;
+    font-size: 6rem;
+}
+
+#icon_nav{
+    color: white;
+    font-size: 12rem;
+}
+
+/* Accueil Main */
+
+main{
+    background-color: #4e3ff4;
+}
+
+h1, h2, #right, .offre_solo span{
+    color: #ffffea;
+}
+
+.offre_solo{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+
+}
+
+.offre_block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.offre_solo span{
+    font-size: 8rem;
+}
+
+#right{
+    font-size: 22rem;
+}
+
+.offre_solo button{
+    width: 20rem;
+    height: 5rem;
+    font-size: 2rem;
+}
+
+.description_block{
+    background-color: #ffffea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.description_block:last-child{
+    background-color: white;
+}
+
+.description_block p{
+    width: 70%;
+    margin: 3rem;
+    font-family: 'suez One';
+}
+
+#video_yt{
+    margin: 3rem;
+}
+
+.video_block{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+
+/* Panier */
+
+.panier_block{
+    background-color: #ffffea;
+    display: flex;
+    justify-content: center;
+}
+
+.panier_block h1{
+    color: black;
+}
