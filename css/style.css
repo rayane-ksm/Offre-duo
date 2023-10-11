@@ -21,8 +21,9 @@ html,body{
 }
 
 img {
-    max-width:100% /*correcteur de taille d'image : "ne dépasse pas ta propre taille ni la taille de ton parent" */
-    }
+    max-width:100%; /*correcteur de taille d'image : "ne dépasse pas ta propre taille ni la taille de ton parent" */
+    min-width: 500px;    
+}
 
 h1  {
     padding-top: 5rem;
@@ -38,20 +39,20 @@ h2 {
 h3  {
     font-size: x-large;
     text-decoration: underline;
-    font-size: 3rem;
     font-family: 'suez One';
+    text-decoration: none;
 }
 
 /* Navbar */
 
-header{
+/* header{
     background-color: rgba(0,0,0, 80%);
     height: 12rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
 header a{
     margin: 0 10rem;
@@ -141,6 +142,8 @@ h1, h2, #right, .offre_solo span{
 
 #video_yt{
     margin: 3rem;
+    width: 100%;
+    height: 70rem;
 }
 
 .video_block{
@@ -148,7 +151,7 @@ h1, h2, #right, .offre_solo span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 0;
 }
 
 
@@ -156,8 +159,9 @@ h1, h2, #right, .offre_solo span{
 
 .panier_page{
     display: flex;
-    justify-content: center;
+    align-items: center;
     background-color: #ffffea;
+    flex-direction: column;
 }
 
 .panier_block{
@@ -169,6 +173,118 @@ h1, h2, #right, .offre_solo span{
     padding-bottom: 3rem;
 }
 
+.panier_contain{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border-bottom: solid black;
+    justify-content: center;
+    gap: 2%;
+}
+
 .panier_block h1{
     color: black;
+}
+
+li{
+    display: flex;
+}
+
+.panier_title{
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.panier_title h3{
+    text-transform: uppercase;
+}
+
+.panier_title p, .gains_tot_block p:first-child  {
+    font-size: 2rem;
+    font-family: 'suez One';
+    text-transform: uppercase;
+}
+
+.gains_total{
+    display: flex;
+    justify-content: end;
+    gap: 10rem;
+    padding: 3rem;
+}
+
+.gains_tot_block{
+    display: flex;
+    gap: 3rem;
+}
+
+.btn_block{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.btn_block button{
+    width: 20rem;
+  height: 5rem;
+  font-size: 2rem;
+}
+
+.contact_form{
+    background-color: #ffffea;
+    display: flex;
+    justify-content: center;
+}
+
+.panier_page form{
+    width: 30%;
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+form .btn_block{
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 1120px) {
+
+    .panier_title h3{
+        font-size: 2rem;
+    }
+
+    .panier_title{
+        padding: 0;
+    }
+
+    .panier_contain{
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 926px) {
+    .offre_block{
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    h3{
+        font-size: large;
+    }
+}
+
+@media (max-width: 634px) {
+    .panier_title h3, .panier_title p{
+        font-size: 1rem;
+    }
 }
