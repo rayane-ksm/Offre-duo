@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Suez+One&display=swap');
 
 /* GLOBAL */
 * {
@@ -137,7 +138,7 @@ h1, h2, #right, .offre_solo span{
 .description_block p{
     width: 70%;
     margin: 3rem;
-    font-family: 'suez One';
+    font-family: 'poppins';
 }
 
 #video_yt{
